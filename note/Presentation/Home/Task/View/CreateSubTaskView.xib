@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateSubTaskView" customModule="note" customModuleProvider="target">
+            <connections>
+                <outlet property="mCheckbox" destination="RKc-fk-MTV" id="tCZ-nz-mv5"/>
+                <outlet property="mSubmut" destination="fmE-t4-81w" id="eRB-tM-aFg"/>
+                <outlet property="mTftTask" destination="RRG-Hj-TqI" id="gh6-64-jhy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zi1-Yv-XzM">
+                    <rect key="frame" x="0.0" y="734" width="390" height="110"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiN-lg-qGa">
+                            <rect key="frame" x="12" y="12" width="366" height="50"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-fk-MTV">
+                                    <rect key="frame" x="8" y="10" width="30" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="7dQ-WM-ec7"/>
+                                        <constraint firstAttribute="width" secondItem="RKc-fk-MTV" secondAttribute="height" multiplier="1:1" id="okh-MJ-PGD"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập nhiệm vụ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRG-Hj-TqI">
+                                    <rect key="frame" x="50" y="3" width="260.66666666666669" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="M0h-mC-hV6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmE-t4-81w">
+                                    <rect key="frame" x="316.66666666666669" y="7.6666666666666288" width="49.333333333333314" height="35"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system"/>
+                                    <connections>
+                                        <action selector="onActionSubbmit:" destination="-1" eventType="touchUpInside" id="xj0-bc-9ro"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="fmE-t4-81w" secondAttribute="trailing" id="KnC-r8-pfM"/>
+                                <constraint firstItem="RRG-Hj-TqI" firstAttribute="leading" secondItem="RKc-fk-MTV" secondAttribute="trailing" constant="12" id="TAE-Dh-IgI"/>
+                                <constraint firstItem="RKc-fk-MTV" firstAttribute="centerY" secondItem="fiN-lg-qGa" secondAttribute="centerY" id="VcC-4o-JLl"/>
+                                <constraint firstItem="fmE-t4-81w" firstAttribute="leading" secondItem="RRG-Hj-TqI" secondAttribute="trailing" constant="6" id="YO3-z7-rgr"/>
+                                <constraint firstAttribute="height" constant="50" id="na3-2R-MRA"/>
+                                <constraint firstItem="RRG-Hj-TqI" firstAttribute="centerY" secondItem="fiN-lg-qGa" secondAttribute="centerY" id="v5K-FI-t7n"/>
+                                <constraint firstItem="fmE-t4-81w" firstAttribute="centerY" secondItem="fiN-lg-qGa" secondAttribute="centerY" id="xOr-qs-5aA"/>
+                                <constraint firstItem="RKc-fk-MTV" firstAttribute="leading" secondItem="fiN-lg-qGa" secondAttribute="leading" constant="8" id="xpP-6H-R9b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="fiN-lg-qGa" firstAttribute="top" secondItem="Zi1-Yv-XzM" secondAttribute="top" constant="12" id="5A7-I4-qlw"/>
+                        <constraint firstItem="fiN-lg-qGa" firstAttribute="leading" secondItem="Zi1-Yv-XzM" secondAttribute="leading" constant="12" id="VnB-o9-uB6"/>
+                        <constraint firstAttribute="trailing" secondItem="fiN-lg-qGa" secondAttribute="trailing" constant="12" id="jTW-2p-3Ci"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fiN-lg-qGa" secondAttribute="bottom" constant="14" id="CF3-yB-NY7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zi1-Yv-XzM" secondAttribute="trailing" id="H8B-g0-H3w"/>
+                <constraint firstAttribute="bottom" secondItem="Zi1-Yv-XzM" secondAttribute="bottom" id="aPT-Jg-PmL"/>
+                <constraint firstItem="Zi1-Yv-XzM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kTV-5g-qPf"/>
+            </constraints>
+            <point key="canvasLocation" x="61.538461538461533" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

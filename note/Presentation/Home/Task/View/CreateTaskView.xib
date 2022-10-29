@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateTaskView" customModule="note" customModuleProvider="target">
+            <connections>
+                <outlet property="mTftTitleTask" destination="Tsc-Xk-yMC" id="iD6-uB-7U3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atL-Mh-46Z">
+                    <rect key="frame" x="0.0" y="712" width="390" height="132"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tiêu đề" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tsc-Xk-yMC">
+                            <rect key="frame" x="12" y="41" width="330" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Mtw-dd-nFg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiêu đề Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoz-wx-LPu">
+                            <rect key="frame" x="12" y="8" width="96" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t93-2O-u4U">
+                            <rect key="frame" x="354" y="41" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="t93-2O-u4U" secondAttribute="height" multiplier="1:1" id="YP1-WP-m88"/>
+                            </constraints>
+                            <color key="tintColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system"/>
+                            <connections>
+                                <action selector="onActionDetailView:" destination="-1" eventType="touchUpInside" id="Sw7-66-4e4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="aoz-wx-LPu" firstAttribute="leading" secondItem="Tsc-Xk-yMC" secondAttribute="leading" id="4EI-2Y-G0K"/>
+                        <constraint firstItem="t93-2O-u4U" firstAttribute="leading" secondItem="Tsc-Xk-yMC" secondAttribute="trailing" constant="12" id="7Hg-jc-lq9"/>
+                        <constraint firstItem="Tsc-Xk-yMC" firstAttribute="top" secondItem="aoz-wx-LPu" secondAttribute="bottom" constant="12" id="B8y-sX-qGc"/>
+                        <constraint firstAttribute="trailing" secondItem="t93-2O-u4U" secondAttribute="trailing" constant="12" id="BX5-Dy-P7X"/>
+                        <constraint firstAttribute="trailing" secondItem="Tsc-Xk-yMC" secondAttribute="trailing" constant="48" id="FjI-9a-lBt"/>
+                        <constraint firstItem="aoz-wx-LPu" firstAttribute="top" secondItem="atL-Mh-46Z" secondAttribute="top" constant="8" id="Fyd-Kd-g2D"/>
+                        <constraint firstItem="Tsc-Xk-yMC" firstAttribute="leading" secondItem="atL-Mh-46Z" secondAttribute="leading" constant="12" id="fr4-Px-Dbp"/>
+                        <constraint firstItem="t93-2O-u4U" firstAttribute="top" secondItem="Tsc-Xk-yMC" secondAttribute="top" id="g4l-KQ-j5P"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="atL-Mh-46Z" secondAttribute="bottom" id="1Xl-vP-zdN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Tsc-Xk-yMC" secondAttribute="bottom" constant="13" id="5R7-PC-oZa"/>
+                <constraint firstItem="atL-Mh-46Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dZq-ui-uwn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="atL-Mh-46Z" secondAttribute="trailing" id="v81-Gb-O4G"/>
+            </constraints>
+            <point key="canvasLocation" x="4.615384615384615" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubtasksVC" customModule="note" customModuleProvider="target">
+            <connections>
+                <outlet property="mTblCreateSubtask" destination="J6v-jM-ltu" id="vmw-8f-6fK"/>
+                <outlet property="mTblView" destination="LgF-aG-fgE" id="cth-zf-7zy"/>
+                <outlet property="msgEmpty" destination="wnT-ej-9wD" id="w5W-TS-DH9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-aG-fgE">
+                    <rect key="frame" x="0.0" y="47" width="390" height="713"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hkF-cO-SZo"/>
+                        <outlet property="delegate" destination="-1" id="rTv-sC-6jk"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6v-jM-ltu">
+                    <rect key="frame" x="12" y="768" width="366" height="42"/>
+                    <color key="backgroundColor" white="0.45075999149659862" alpha="0.38798634105960267" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" name="Card"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="Add a task"/>
+                    <connections>
+                        <action selector="onAddTask:" destination="-1" eventType="touchUpInside" id="Clo-vM-2Z8"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnT-ej-9wD">
+                    <rect key="frame" x="174" y="418" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.4352940917" green="0.4941176176" blue="0.78823530669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LgF-aG-fgE" secondAttribute="bottom" constant="50" id="8Jm-Os-YgF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J6v-jM-ltu" secondAttribute="trailing" constant="12" id="ASA-b4-eq1"/>
+                <constraint firstItem="wnT-ej-9wD" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="B6L-D2-gii"/>
+                <constraint firstItem="LgF-aG-fgE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SfT-oi-Mh5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LgF-aG-fgE" secondAttribute="trailing" id="T4E-gS-Aov"/>
+                <constraint firstItem="J6v-jM-ltu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="hfK-kz-4gg"/>
+                <constraint firstItem="wnT-ej-9wD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kPr-Wi-r5C"/>
+                <constraint firstItem="J6v-jM-ltu" firstAttribute="top" secondItem="LgF-aG-fgE" secondAttribute="bottom" constant="8" id="mTv-la-llG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J6v-jM-ltu" secondAttribute="bottom" id="t7y-wI-oGt"/>
+                <constraint firstItem="LgF-aG-fgE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vdG-uE-XhM"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Card">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
