@@ -2,7 +2,6 @@
 //  UIView+Ext.swift
 //  note
 //
-//  Created by Thanh on 29/10/2022.
 //
 
 import UIKit

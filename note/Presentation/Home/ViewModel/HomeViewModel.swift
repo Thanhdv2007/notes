@@ -2,7 +2,6 @@
 //  HomeViewModel.swift
 //  note
 //
-//  Created by Thanh on 27/10/2022.
 //
 
 import RealmSwift

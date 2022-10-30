@@ -2,7 +2,6 @@
 //  TabbarViewModel.swift
 //  note
 //
-//  Created by Thanh on 28/10/2022.
 //
 
 import Foundation
