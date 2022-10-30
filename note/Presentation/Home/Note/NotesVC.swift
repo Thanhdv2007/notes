@@ -7,13 +7,13 @@
 
 import UIKit
 import MultilineTextField
+import IQKeyboardManagerSwift
 
 class NotesVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var mTitle: UITextField!
-    @IBOutlet weak var viewEditor: UIView!
+    @IBOutlet weak var viewEditor: UITextView!
   
-    var textField: MultilineTextField?
     var currentNote:TaskModelDTO?
     
     override func viewDidLoad() {
@@ -24,26 +24,29 @@ class NotesVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         self.navigationController?.navigationBar.isTranslucent = false
         
-        textField = MultilineTextField(frame: viewEditor.bounds)
-        // below are properties that can be optionally customized
-        textField?.placeholder =  "Bắt đầu viết"
-        textField?.placeholderColor = UIColor.gray
-        textField?.isPlaceholderScrollEnabled = true
-        textField?.delegate = self
-        
-        textField?.leftViewOrigin = CGPoint(x: 8, y: 8)
-        viewEditor.addSubview(textField ?? MultilineTextField())
         if currentNote != nil {
             mTitle.text = currentNote!.title
-            textField?.becomeFirstResponder()
-            textField?.text = currentNote?.descript
+            mTitle.resignFirstResponder()
+            viewEditor.becomeFirstResponder()
+            viewEditor.text = currentNote?.descript
         }
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        IQKeyboardManager.shared.enable = false
+        IQKeyboardManager.shared.enableAutoToolbar = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        super.viewDidDisappear(animated)
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        guard let title = mTitle.text, let description = textField?.text else {
+        guard let title = mTitle.text, let description = viewEditor.text else {
             super.viewWillDisappear(animated)
             return
         }
@@ -58,7 +61,7 @@ class NotesVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         }
         
         let note = TaskModelDTO()
-        note.title = !title.isEmpty ? title : textField?.text ?? currentNote?.descript ?? ""
+        note.title = !title.isEmpty ? title : viewEditor.text ?? currentNote?.descript ?? ""
         note.descript = description
         note.typeNode = .note
         
@@ -76,7 +79,7 @@ class NotesVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == mTitle{
             mTitle.resignFirstResponder()
-            self.textField?.becomeFirstResponder()
+            viewEditor.becomeFirstResponder()
         }
         return true
     }

@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="mTitle" destination="Bek-ym-6ME" id="SAd-OQ-bla"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewEditor" destination="zcF-Gw-uhG" id="Kaq-Tw-Zms"/>
+                <outlet property="viewEditor" destination="2Nq-lB-mYt" id="z2i-vO-Ds5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,26 +29,33 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcF-Gw-uhG">
-                    <rect key="frame" x="12" y="103" width="366" height="697"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Nq-lB-mYt">
+                    <rect key="frame" x="12" y="103" width="366" height="707"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
+                    <accessibility key="accessibilityConfiguration" hint="Bắt đầu viết"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="zcF-Gw-uhG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="8FM-b7-EP1"/>
-                <constraint firstItem="zcF-Gw-uhG" firstAttribute="top" secondItem="Bek-ym-6ME" secondAttribute="bottom" id="AS7-lM-gbQ"/>
                 <constraint firstItem="Bek-ym-6ME" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Qz1-cF-2ad"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zcF-Gw-uhG" secondAttribute="trailing" constant="12" id="TeY-C7-KUD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zcF-Gw-uhG" secondAttribute="bottom" constant="10" id="Ujd-w8-c1O"/>
+                <constraint firstItem="2Nq-lB-mYt" firstAttribute="top" secondItem="Bek-ym-6ME" secondAttribute="bottom" id="Vin-b5-9MC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2Nq-lB-mYt" secondAttribute="bottom" id="ZAS-b2-jUN"/>
                 <constraint firstItem="Bek-ym-6ME" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="aTu-iE-1pY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Nq-lB-mYt" secondAttribute="trailing" constant="12" id="j7m-JT-4UY"/>
+                <constraint firstItem="2Nq-lB-mYt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="rKC-Yd-6ks"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bek-ym-6ME" secondAttribute="trailing" constant="12" id="zcP-NU-WLJ"/>
             </constraints>
             <point key="canvasLocation" x="63" y="21"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

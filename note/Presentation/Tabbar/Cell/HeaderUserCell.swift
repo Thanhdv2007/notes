@@ -20,6 +20,9 @@ class HeaderUserCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.fill()
+        mLogout.setImage(UIImage(named: "ic_logout")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        mLogout.tintColor = .systemGray2
+//
     }
 
     
